@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<title>Calculator: printing result in textbox</title>
+	</head>
+	<style>
+		div{
+			padding: 30px;
+			background-color: #C0C0C0;
+			margin-left: 590px;
+			border-radius: 45px;
+			box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+			width: 250px;
+			height: 280px;
+			text-align: center;
+		 }
+		input[type=number]{
+			padding: 7px;
+			background-color: #00FFFF;
+			border: 3px;
+			box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+			border-radius: 7px;
+			text-align: center;
+			width: 80px;
+			height: 30px;
+			margin-top: 10px;
+		}
+		input[type=submit], input[type=reset]{
+			padding: 7px;
+			background-color: #FFA500;
+			border: 3px;
+			box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+			border-radius:7px;
+			text-align: center;
+			width: 45px;
+			height: 27px;
+			margin-top: 7px;
+		}
+	</style>
+	<body>
+		<br><br><br><br><br><br><br><br><br><br>
+		<div>
+		<form onsubmit="return false">
+		<center><h2><u>Arithmetic Calculator</u></h2></center>
+			<input type="number" name="op1" id="op1">
+			&nbsp; &nbsp; &nbsp;
+			<input type="number" name="op2" id="op2">
+			<br>
+			<b><label for="result">Result:- </label></b>
+			<input type="number" name="result" id="result" readonly>
+			<br><br>
+			<input type="submit" name="+" id="+" value="+" onClick="add()">
+			&nbsp; &nbsp;
+			<input type="submit" name="-" id="-" value="-" onClick="sub()">
+			<br>
+			<input type="submit" name="*" id="*" value="*" onClick="mul()">
+			&nbsp; &nbsp;
+			<input type="submit" name="/" id="/" value="/" onClick="div()">
+			<br>
+			<input type="reset" name="clear" id="clear" value="clear">
+		</form>
+		<script>
+		function add()
+		{
+			var a= document.getElementById("op1").value;
+			var b= document.getElementById("op2").value;
+			var c= parseInt(a) + parseInt(b);
+			//result.value= c;
+			document.getElementById("result").value=c;
+		}
+		function sub()
+		{
+			var a= document.getElementById("op1").value;
+			var b= document.getElementById("op2").value;
+			var c= parseInt(a) - parseInt(b);
+			//result.value= c;
+			document.getElementById("result").value=c;
+		}
+		function mul()
+		{
+			var a= document.getElementById("op1").value;
+			var b= document.getElementById("op2").value;
+			var c= parseInt(a) * parseInt(b);
+			//result.value= c;
+			document.getElementById("result").value=c;
+		}
+		function div()
+		{
+			var a= document.getElementById("op1").value;
+			var b= document.getElementById("op2").value;
+			var c= parseInt(a) / parseInt(b);
+			//result.value= c;
+			document.getElementById("result").value=c;
+		}
+	</script>
+		</div>
+	</body>
+</html>
